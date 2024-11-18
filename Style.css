@@ -1,0 +1,249 @@
+/* Estilos Básicos */
+body {
+    font-family: sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    padding-bottom: 1.5rem;
+}
+
+ul, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: #0E1826;
+    flex-wrap: wrap; /* Evita colisão de elementos */
+}
+
+.logo img {
+    max-width: 150px; /* Logo com tamanho fluido */
+    height: auto;
+}
+
+.navigate ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.btsec, .btprim {
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+
+.btsec {
+    border: 2px solid #A39276;
+    color: #A39276;
+}
+
+.btprim {
+    background-color: #A39276;
+    color: #fff;
+    border: 2px solid #A39276;
+}
+
+/* Apresentação */
+.apresentação {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: #E8E3DC;
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.logodec {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.titulo {
+    font-size: 2.5rem;
+    font-weight: lighter;
+}
+
+.nome {
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Sobre */
+.sobre {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1.5rem;
+    padding: 2rem 4rem;
+    background-color: #0E1826;
+    color: #A39276;
+}
+
+.sobrec1 p {
+    margin-bottom: 1rem;
+}
+
+.mf {
+    width: 100%;
+    padding-top: 2rem;
+}
+
+/* Serviços */
+.serviços {
+    padding: 2rem 4rem;
+    background-color: #0E1826;
+    border-top: 2px solid #A39276;
+}
+
+.MS {
+    color: #A39276;
+    margin-bottom: 2rem;
+}
+
+.imgserv {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.imgs {
+    border: 4px solid #A39276;
+    aspect-ratio: 1 / 1; /* Quadrados perfeitos */
+}
+
+/* Rodapé */
+footer {
+    display: flex;
+    flex-wrap: wrap; /* Cria novas linhas automaticamente */
+    gap: 1rem;
+    padding: 1rem 4rem;
+    background-color: #0E1826;
+    border-top: 2px solid #A39276;
+}
+
+.titulofooter {
+    font-size: 1.5rem;
+    color: #A39276;
+}
+
+.contlist {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    /* Tablets */
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo img {
+        content: url("/Imgs/logo-mark.svg"); /* Substitui texto pela logomarca */
+        max-width: 100px;
+    }
+
+    .navigate ul {
+        flex-direction: column;
+    }
+
+    .btsec {
+        display: none; /* Esconde botões secundários */
+    }
+
+    .apresentação {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .logodec {
+        display: none; /* Remove imagem decorativa */
+    }
+
+    .titulo {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .sobre {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .imgserv {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Smartphones */
+    .btsec {
+        display: none; /* Esconde botões secundários */
+    }
+
+    .btprim {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header {
+        padding: 1rem;
+    }
+
+    .logo img {
+        content: url("/Imgs/logo-mark.svg"); /* Apenas logomarca */
+        max-width: 80px;
+    }
+
+    .apresentação {
+        padding: 1rem;
+    }
+
+    .logodec {
+        display: none; /* Remove imagem decorativa */
+    }
+
+    .imgserv {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        justify-content: center;
+    }
+}
